@@ -48,10 +48,11 @@ print(tic[2])
 # schriebe ein Programm das 2 Zahlen zwischen 1 und 3 und einem Buchstaben vom user fordert
 # Anschliessend soll der Wert mit der Pos der zwei Zahlen mit den Buchstaben überschrieben werden
 # und die Liste wie in der vorherigen Aufgabe ausgegeben werden
+ #y
 # 1['o', 'o', 'o']
 # 2['x', 'x', 'o']
 # 3['o', 'x', 'o']
-#    1    2    3
+#    1    2    3  x
 x_wert = int(input('x wert Zahl 1-3:\n'))
 y_wert = int(input('y wert Zahl 1-3:\n'))
 zeichen = input('Zeichen:\n')
