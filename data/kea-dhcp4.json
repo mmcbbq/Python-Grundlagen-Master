@@ -1,0 +1,53 @@
+{
+	"Dhcp4":{
+		"interfaces-config":{
+		"interfaces":["eth1"]
+		},
+		"control-socket":{
+		"socket-type":"unix",
+		"socket-name":"/run/kea/kea4-ctrl-socket"
+		},
+		"lease-database":{
+		"type":"memfile",
+		"lfc-interval":3600
+		},
+		"valid-lifetime":600,
+		"max-valid-lifetime":7200,
+		"dhcp-ddns":{
+			"enable-updates": true
+			},
+		"ddns-qualifying-suffix": "mmc-linux.zz",
+		"ddns-override-client-update": true,
+		"subnet4":[
+		{
+		"id":1,
+		"subnet":"192.168.0.0/24",
+		"pools":[
+		{
+		"pool":"192.168.0.10-192.168.0.200"
+		}
+		],
+		"option-data":[
+		{
+		"name":"routers",
+		"data":"192.168.0.254"
+		},
+		{
+		"name":"domain-name-servers",
+		"data":"192.168.0.254"
+		},
+
+		{
+		"name":"domain-name",
+		"data":"mmc-linux.zz"
+		},
+		{
+		"name":"domain-search",
+		"data":"mmc-linux.zz"
+		}
+
+		]
+	}
+	]
+}
+}
