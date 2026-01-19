@@ -41,7 +41,6 @@ rand_zahlen = [452, 30, 688, 177, 534, 137, 490, 387, 845, 882, 896, 798, 456, 6
 
 # Elemente addieren: Gehe durch die Liste rand_zahlen und addiere alle Elemente [Summe]
 
-import random
 
 
 # Gib die Anzahl der Elemente aus ohne len oder andere eingebaute Funktionen

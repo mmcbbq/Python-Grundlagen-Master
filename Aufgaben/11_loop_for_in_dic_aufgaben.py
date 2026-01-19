@@ -104,3 +104,4 @@ dict2 = {'b': 3, 'c': 4, 'd': 5}
 
 # Schreibe eine Schleife, die ein neues Dictionary erstellt, das die absoluten Differenzen der Werte für jeden gemeinsamen Schlüssel in dict1 und dict2 enthält.
 # {'b': 1, 'c': 1}
+

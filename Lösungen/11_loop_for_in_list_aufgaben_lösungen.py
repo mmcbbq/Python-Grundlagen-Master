@@ -2,7 +2,7 @@ user = ['Bob', 'Eve', 'Jim', 'John', 'Tim']
 # printe für alle Namen der Liste user "createuser username"
 # Beispiel "createuser Bob"
 for name in user:
-    print('createuser', name)
+    print(f'createuser {name}')
 
 # Wandele die Username in lowercase um bevor du sie ausdruckst
 # Beispiel "createuser bob"

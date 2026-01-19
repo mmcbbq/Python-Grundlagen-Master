@@ -3,7 +3,7 @@
 		"interfaces-config":{
 		"interfaces":["eth1"]
 		},
-		"control-socket":{
+		"control-socket": {
 		"socket-type":"unix",
 		"socket-name":"/run/kea/kea4-ctrl-socket"
 		},
