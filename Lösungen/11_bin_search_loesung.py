@@ -34,7 +34,7 @@ while True:
     mitte = (len(sort_list)) // 2
     print(f'mitte index {mitte} ')
 
-    if sort_list:
+    if len(sort_list) == 0:
         print('nicht weil')
         break
     elif suche == sort_list[mitte]:
