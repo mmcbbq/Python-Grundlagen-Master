@@ -140,3 +140,15 @@ print('#######################')
 # # XOXOXOXO
 # # OXOXOXOX
 # # XOXOXOXO
+
+y = 10000
+zeichen = 'x'
+for x in range(y):
+
+    for i in range(y):
+        if (i+x) % 2 == 0:
+            zeichen = 'x'
+        else:
+            zeichen = 'o'
+        print(zeichen,end='')
+    print('')

@@ -136,26 +136,26 @@ list_dic = [{'name': 'Melanie Reilly', 'email': 'jacksonlopez@example.com', 'anz
 # 			{'name': 'Michael Salazar', 'email': 'patriciasmith@example.net', 'anzahl': 12}
 # ]
 #
-# for y in range(len(list_dic) - 1):
-#
-#     for x in range(len(list_dic) - 1 - y):
-#         print(list_dic[x]['anzahl'], list_dic[x + 1]['anzahl'])
-#         if list_dic[x]['anzahl'] > list_dic[x + 1]['anzahl']:
-#             zw = list_dic[x]
-#             list_dic[x] = list_dic[x + 1]
-#             list_dic[x + 1] = zw
-# for z in list_dic:
-#     print(z)
-#
-# for y in range(len(list_dic) - 1):
-#     for x in range(len(list_dic) - 1 - y):
-#         if list_dic[x]['anzahl'] > list_dic[x + 1]['anzahl']:
-#             zw = list_dic[x]
-#             list_dic[x] = list_dic[x + 1]
-#             list_dic[x + 1] = zw
-#         elif list_dic[x]["anzahl"] == list_dic[x + 1]["anzahl"]:
-#             if list_dic[x]['name'] > list_dic[x + 1]['name']:
-#                 list_dic[x], list_dic[x + 1] = list_dic[x + 1], list_dic[x]
-#
-# for z in list_dic:
-#     print(z)
+for y in range(len(list_dic) - 1):
+
+    for x in range(len(list_dic) - 1 - y):
+        print(list_dic[x]['anzahl'], list_dic[x + 1]['anzahl'])
+        if list_dic[x]['anzahl'] > list_dic[x + 1]['anzahl']:
+            zw = list_dic[x]
+            list_dic[x] = list_dic[x + 1]
+            list_dic[x + 1] = zw
+for z in list_dic:
+    print(z)
+
+for y in range(len(list_dic) - 1):
+    for x in range(len(list_dic) - 1 - y):
+        if list_dic[x]['anzahl'] > list_dic[x + 1]['anzahl']:
+            zw = list_dic[x]
+            list_dic[x] = list_dic[x + 1]
+            list_dic[x + 1] = zw
+        elif list_dic[x]["anzahl"] == list_dic[x + 1]["anzahl"]:
+            if list_dic[x]['name'] > list_dic[x + 1]['name']:
+                list_dic[x], list_dic[x + 1] = list_dic[x + 1], list_dic[x]
+
+for z in list_dic:
+    print(z)

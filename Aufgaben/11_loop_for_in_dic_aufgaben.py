@@ -14,24 +14,28 @@ my_dict = {'A': 1, 'B': 2, 'C': 3}
 
 
 # Schreibe eine Schleife, die alle Werte in my_dict ausgibt.
-#1
-#2
-#3
+# 1
+# 2
+# 3
 
 
 # Schreibe eine Schleife, die den Gesamtwert aller Werte in my_dict berechnet.
-#6
+# 6
 
 # Schreibe eine Schleife, die jeden Schlüssel in my_dict ausgibt, dessen Wert größer als 1 ist.
-#B
-#C
+# B
+# C
 
 # Schreibe eine Schleife, die jeden Wert in my_dict verdoppelt und das aktualisierte Dictionary ausgibt.
 
-#{'A': 2, 'B': 4, 'C': 6}
+# {'A': 2, 'B': 4, 'C': 6}
 
 # Gegeben ist das folgende Dictionary student_scores: {'Alice': [80, 90, 70], 'Bob': [85, 88, 75], 'Charlie': [95, 82, 88]}.
 # Schreibe eine Schleife, die den Durchschnitt der Noten für jeden Schüler berechnet und ausgibt.
+werte = {'Alice': [80, 90, 70], 'Bob': [85, 98, 75], 'Charlie': [95, 82, 88]}
+
+
+
 
 # Alice 80.00
 # Bob 82.67
@@ -40,10 +44,21 @@ my_dict = {'A': 1, 'B': 2, 'C': 3}
 # Schreibe eine Schleife, die den Namen des Schülers mit der besten  Punktzahl
 # aus dem Dictionary student_scores ausgibt.
 
+
 # beste Note Charlie mit 95
 
 # Schreibe eine Schleife, die das maximale Ergebnis für jeden Schüler aus dem Dictionary student_scores ausgibt.
 # Schreibe eine Schleife, die das minimale Ergebnis für jeden Schüler aus dem Dictionary student_scores ausgibt.
+
+for name, noten_liste in werte.items():
+    min_note = noten_liste[0]
+    max_note = noten_liste[0]
+    for note in noten_liste:
+        if min_note > note:
+            min_note = note
+        if max_note < note:
+            max_note = note
+    print(f'{name} min: {min_note} max: {max_note}')
 
 
 # Alice min:70 max:90
@@ -52,21 +67,27 @@ my_dict = {'A': 1, 'B': 2, 'C': 3}
 
 
 # Schreibe eine Schleife, die den Namen des Schülers mit dem höchsten Durchschnitt aus dem Dictionary student_scores ausgibt.
-#Der beste student ist Charlie mit einem durschnitt von 88.33
+# Der beste student ist Charlie mit einem durschnitt von 88.33
 
 # Gegeben ist das folgende Dictionary.
 fruits = {'Apfel': {'bestand': 100, 'verkauft': 20, 'preis': 0.25, 'lager kapazität': 200},
           'Banane': {'bestand': 78, 'verkauft': 42, 'preis': 0.12, 'lager kapazität': 100},
-          'Orange': {'bestand': 24, 'verkauft': 11, 'preis': 0.39, 'lager kapazität': 100}
+          'Orange': {'bestand': 24, 'verkauft': 11, 'preis': 0.39, 'lager kapazität': 50}
 
           }
 # Schreibe eine Schleife, die den Namen der Frucht mit dem höchsten Bestand ausgibt.
+max_bestand = fruits['Apfel']['bestand']
 
-# Der höchste Bestand von 100 hat der Apfel
-
+max_f = list(fruits.keys())[0]
+# for fruit in fruits:
+#     if max_bestand < fruits[fruit]['bestand']:
+#         max_bestand = fruits[fruit]['bestand']
+#         max_f = fruit
+# # Der höchste Bestand von 100 hat der Apfel
+# print(f'{max_f} {max_bestand}')
 # erweitere fruits um den Eintrag
-# 'Traube: {'bestand': 150, 'verkauft': 0, 'preis': 0.59, 'lager kapazität': 150}
-
+# 'Traube': {'bestand': 150, 'verkauft': 0, 'preis': 0.59, 'lager kapazität': 150}
+fruits['Traube'] = {'bestand': 150, 'verkauft': 0, 'preis': 0.59, 'lager kapazität': 150}
 # Schreibe eine Schleife, die den Namen und den Bestand jeder Frucht in fruits ausgibt.
 
 # Apfel:	 100
@@ -83,6 +104,13 @@ fruits = {'Apfel': {'bestand': 100, 'verkauft': 20, 'preis': 0.25, 'lager kapazi
 
 # Berechne die auslastung der lager Kapazität in % fuer alle Fruechte.
 
+for fruit in fruits:
+    bestand =fruits[fruit]['bestand']
+    lager_k =fruits[fruit]['lager kapazität']
+    print(f'{fruit}:  { bestand *100/lager_k}')
+
+
+
 # Apfel: 50.0%
 # Banane: 78.0%
 # Orange: 48.0%
@@ -95,13 +123,18 @@ dict2 = {'b': 3, 'c': 4, 'd': 5}
 # Schreibe eine Schleife, die die gemeinsamen Schlüssel von dict1 und dict2 ausgibt.
 # b
 # c
-
-
+for d in dict1:
+    if d in dict2:
+        print(d)
 
 # Schreibe eine Schleife, die ein neues Dictionary erstellt,
 # das die Summe der Werte für jeden gemeinsamen Schlüssel in dict1 und dict2 enthält.
 # {'b': 5, 'c': 7}
+new_d = {}
+for d in dict1:
+    if d in dict2:
+        print(abs(dict1[d] - dict2[d]))
 
+print(new_d)
 # Schreibe eine Schleife, die ein neues Dictionary erstellt, das die absoluten Differenzen der Werte für jeden gemeinsamen Schlüssel in dict1 und dict2 enthält.
 # {'b': 1, 'c': 1}
-
