@@ -28,8 +28,6 @@
 # 	print('='*30)
 import time
 
-
-
 # Schreibe eine while loop die den Algorithmus solange ausfuehrt
 # bis der Näherungswert auf 0.1 des exakten Ergebnis liegt
 
@@ -43,16 +41,14 @@ import time
 
 jetzt = time.time()
 primzahlen = []
-for x in range(2,100):
-	primzahlen.append(x)
-
-
+for x in range(2, 100):
+    primzahlen.append(x)
 
 for primzahl in primzahlen:
-	for kandidat in primzahlen:
-		if primzahl != kandidat:
-			if kandidat % primzahl == 0:
-				primzahlen.remove(kandidat)
+    for kandidat in primzahlen:
+        if primzahl != kandidat:
+            if kandidat % primzahl == 0:
+                primzahlen.remove(kandidat)
 
 print(primzahlen)
 print(time.time() - jetzt)
@@ -64,3 +60,25 @@ print(time.time() - jetzt)
 # kann sie nur durch eins und sich selbst teilbar sein. Folglich muss es sich um eine Primzahl handeln.
 # Diese wird dementsprechend als Primzahl ausgegeben. Man streicht wieder alle Vielfachen und führt das Verfahren fort,
 # bis man am Ende der Liste angekommen ist. Im Verlauf des Verfahren werden alle Primzahlen ausgegeben.
+
+
+import time
+import math
+
+start_time = time.perf_counter()
+bis = 100_000_000
+schranke = int(math.sqrt(bis))
+print()
+prime = []
+for x in range(bis):
+    prime.append(True)
+
+laenge = len(prime)
+
+for x in range(schranke + 2):
+    if prime[x]:
+        start = 2 + x * 2
+        for y in range(start, laenge, x + 2):
+            prime[y] = False
+end = time.perf_counter()
+print(f"Berechnungszeit {end - start_time} Sekunden aller Primzahlen zwischen 2 - {bis}")
